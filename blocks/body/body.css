@@ -1,0 +1,19 @@
+.body {
+    max-width: 880px;
+    min-width: 320px;
+    background-color: #000000;
+    margin: auto;
+}
+
+@media screen and (max-width: 1023px) {
+    .body {
+       padding: 0 72px 0; 
+    }
+}
+
+@media screen and (max-width: 801px) {
+    .body {
+        max-width: 100%;
+        padding: 0;
+    }
+}

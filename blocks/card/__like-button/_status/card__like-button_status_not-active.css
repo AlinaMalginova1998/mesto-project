@@ -1,0 +1,10 @@
+.card__like-button_status_not-active {
+    background: url("../../../../images/like-button-empty.svg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+    transition: 0.5s;
+}
+
+.card__like-button_status_not-active:hover {
+    opacity: 0.5;
+}
