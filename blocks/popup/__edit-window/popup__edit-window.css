@@ -1,0 +1,19 @@
+.popup__edit-window {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: #FFF;
+    max-height: 330px;
+    width: 430px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 34px 36px 37px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+    .popup__edit-window {
+        width: 282px;
+        padding: 25px 22px;
+    }
+    
+}

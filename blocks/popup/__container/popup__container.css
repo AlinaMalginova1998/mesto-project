@@ -1,0 +1,26 @@
+.popup__container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: auto 32px; 
+    grid-template-rows: 32px auto;
+    gap: 8px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 155px;
+    left: 50%;
+    transform: translateX(calc((430px)/(-2)));
+    
+}   
+
+@media screen and (max-width: 600px) {
+    .popup__container {
+        grid-template-columns: 1fr; 
+        top: 76px;
+        transform: translate(-50%);
+        gap: 15px;
+        padding: 0 19px 0;
+        box-sizing: border-box;
+        
+    }
+    
+}
