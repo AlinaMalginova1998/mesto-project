@@ -1,20 +1,23 @@
 .profile__name {
-  margin: 0 14px 7px 0;
+  max-width: 100%;
+  margin: 0 19px 7px 0;
   padding: 0;
-  display: inline-block;
   font-family: "Inter", Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 42px;
   line-height: 1.14;
   color: #ffffff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {
-    .profile__name {
-        font-size: calc(27px + 15 * (100vw - 320px) / (600 - 320)) ;
-        line-height: 1.22;
-        margin-right: 10px;
-        text-align: center;
-    }    
+  .profile__name {
+    font-size: calc(27px + 15 * (100vw - 320px) / (600 - 320));
+    line-height: 1.22;
+    margin-right: 10px;
+    
+  }
 }

@@ -16,7 +16,6 @@
 
 @media screen and (max-width: 600px) {
     .popup__exit-button {
-        grid-row: 1;
         grid-column: 1;
         justify-self: flex-end;
         min-height: 20px;

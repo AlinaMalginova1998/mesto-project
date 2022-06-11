@@ -1,4 +1,8 @@
 .profile__description {
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   font-family: "Inter", Arial, sans-serif;
@@ -11,16 +15,14 @@
 }
 
 @media screen and (max-width: 801px) {
-    .profile__description {
-       text-align: center;
-       
-    }
+  .profile__description {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .profile__description {
-        font-size: calc(14px + 4 * (100vw - 320px) / (600 - 320)) ;
-        line-height: 1.22;
-    }    
+  .profile__description {
+    font-size: calc(14px + 4 * (100vw - 320px) / (600 - 320));
+    line-height: 1.22;
+  }
 }
-
