@@ -1,26 +1,25 @@
 .popup__exit-button {
-    border: 0;
-    background: url("../../../images/close-button.svg") no-repeat center center;
-    min-height: 32px;
-    min-width: 32px;
-    background-size: contain;
-    grid-column: 2;
-    grid-row: 1;
-    transition: 0.5s;
-    cursor: pointer;
+  border: 0;
+  background: url("../../../images/close-button.svg") no-repeat center center;
+  min-height: 32px;
+  min-width: 32px;
+  background-size: contain;
+  grid-column: 2;
+  grid-row: 1;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .popup__exit-button:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 600px) {
-    .popup__exit-button {
-        grid-column: 1;
-        justify-self: flex-end;
-        min-height: 20px;
-        min-width: 20px;
-        background-position: center bottom;
-        
-    }
+  .popup__exit-button {
+    grid-column: 1;
+    justify-self: flex-end;
+    min-height: 20px;
+    min-width: 20px;
+    background-position: center bottom;
+  }
 }

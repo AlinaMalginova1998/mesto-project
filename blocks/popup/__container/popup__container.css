@@ -1,19 +1,15 @@
 .popup__container {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: auto 32px; 
-    grid-template-rows: 32px min-content;
-    gap: 8px;
-    box-sizing: border-box;
-    margin-left: calc((100% - 430px)/2);
-    margin-top: 155px;
-}   
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: auto 32px;
+  grid-template-rows: 32px min-content;
+  gap: 8px;
+  box-sizing: border-box;
+}
 
 @media screen and (max-width: 600px) {
-    .popup__container {
-        grid-template-columns: 1fr; 
-        gap: 15px;
-        margin: 76px auto 0;
-    }
-    
+  .popup__container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 }
