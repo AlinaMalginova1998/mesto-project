@@ -1,7 +1,7 @@
 .popup__container {
   max-width: 100%;
   display: grid;
-  grid-template-columns: auto 32px;
+  grid-template-columns: min-content 32px;
   grid-template-rows: 32px min-content;
   gap: 8px;
   box-sizing: border-box;

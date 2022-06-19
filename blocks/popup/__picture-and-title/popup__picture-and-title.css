@@ -1,0 +1,5 @@
+.popup__picture-and-title {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+}

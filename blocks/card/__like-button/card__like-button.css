@@ -6,6 +6,7 @@
   min-width: 22px;
   cursor: pointer;
   background-size: contain;
+  background-color: transparent;
   background-position: center center;
   background-image: url("../../../images/like-button-empty.svg");
   background-repeat: no-repeat;

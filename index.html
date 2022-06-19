@@ -17,22 +17,35 @@
     <a href="#"><img src="./images/header-logo.svg" alt="Логотип Mesto Russia." class="header__logo" /></a>
   </header>
 
-  <main>
-    <div class="popup popup_opened">
-      <div class="popup__container">
-        <div class="popup__edit-window">
-          <h2 class="popup__title">Редактировать профиль</h2>
-          <form class="popup__form-container" name="form-container">
-            <input class="popup__input popup__input_el_name" type="text" name="name" value="Жак-Ив Кусто"
-              placeholder="Введите свое имя">
-            <input class="popup__input popup__input_el_description" type="text" name="description"
-              value="Исследователь океана" placeholder="Напишите немного о себе">
-            <button class="popup__save-button" type="submit">Сохранить</button>
-          </form>
+  <main class="main">
+
+    <!-- модальное окно окна редактирования и окна добавления новой карточки -->
+    <template id="popup">
+      <div class="popup">
+        <div class="popup__container">
+          <div class="popup__edit-window">
+            <h2 class="popup__title"></h2>
+            <form class="popup__form-container" name="form-container">
+              <input class="popup__input" type="text">
+              <input class="popup__input" type="text">
+              <button class="popup__save-button" type="submit"></button>
+            </form>
+          </div>
+          <button class="popup__exit-button" type="button" aria-label="close"></button>
         </div>
-        <button class="popup__exit-button" type="button" aria-label="close"></button>
       </div>
-    </div>
+    </template>
+
+    <!-- модальное окно просмотра картинки -->
+      <div class="popup">
+        <div class="popup__container">
+          <div class="popup__picture-and-title">
+            <img class="popup__image">
+            <h3 class="popup__place-name"></h3>
+          </div>
+          <button class="popup__exit-button" type="button" aria-label="close"></button>
+        </div>
+      </div>
 
     <section class="profile">
       <div class="profile__container">
@@ -51,53 +64,19 @@
     </section>
 
     <section class="cards">
-      <article class="card">
-        <img class="card__image" src="./images/card-moscow.jpeg" alt="Красная площадь, Москва.">
-        <div class="card__caption">
-          <p class="card__place-name">Москва</p>
-          <button class="card__like-button" type="button" aria-label="like"></button>
-        </div>
-      </article>
 
-      <article class="card">
-        <img class="card__image" src="./images/card-spb.jpg" alt="Исаакиевский собор, Санкт-Петербург">
-        <div class="card__caption">
-          <p class="card__place-name">Санкт-Петербург</p>
-          <button class="card__like-button card__like-button_active" type="button" aria-label="like"></button>
-        </div>
-      </article>
+      <template id="card">
+        <article class="card">
+          <button class="card__delete-button" type="reset" aria-label="delete"></button>
+          <img class="card__image">
+          <div class="card__caption">
+            <p class="card__place-name"></p>
+            <button class="card__like-button" type="button" aria-label="like"></button>
+          </div>
+        </article>
+      </template>
 
-      <article class="card">
-        <img class="card__image" src="./images/card-novosibirsk.jpeg" alt="Новосибирск.">
-        <div class="card__caption">
-          <p class="card__place-name">Новосибирск</p>
-          <button class="card__like-button" type="button" aria-label="like"></button>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="card__image" src="./images/card-novosibirsk.jpeg" alt="Новосибирск.">
-        <div class="card__caption">
-          <p class="card__place-name">Новосибирск</p>
-          <button class="card__like-button" type="button" aria-label="like"></button>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="card__image" src="./images/card-moscow.jpeg" alt="Красная площадь, Москва.">
-        <div class="card__caption">
-          <p class="card__place-name">Москва</p>
-          <button class="card__like-button card__like-button_active" type="button" aria-label="like"></button>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="card__image" src="./images/card-spb.jpg" alt="Исаакиевский собор, Санкт-Петербург">
-        <div class="card__caption">
-          <p class="card__place-name">Санкт-Петербург</p>
-          <button class="card__like-button" type="button" aria-label="like"></button>
-        </div>
-      </article>
+    </section>
   </main>
 
   <footer class="footer">
