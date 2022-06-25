@@ -1,89 +1,161 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Сервис для загрузки фотографий красивых мест России"
+    />
+    <meta
+      name="keywords"
+      content="место, россия, путешествия, отпуск, фото, лайк"
+    />
+    <meta name="author" content="Alina Malginova" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Место Россия</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Сервис для загрузки фотографий красивых мест России" />
-  <meta name="keywords" content="место, россия, путешествия, отпуск, фото, лайк" />
-  <meta name="author" content="Alina Malginova" />
-  <link rel="stylesheet" href="./pages/index.css" />
-  <title>Место Россия</title>
-</head>
+  <body class="body">
+    <header class="header">
+      <a href="#"
+        ><img
+          src="./images/header-logo.svg"
+          alt="Логотип Mesto Russia."
+          class="header__logo"
+      /></a>
+    </header>
 
-<body class="body">
-  <header class="header">
-    <a href="#"><img src="./images/header-logo.svg" alt="Логотип Mesto Russia." class="header__logo" /></a>
-  </header>
-
-  <main class="main">
-
-    <!-- модальное окно окна редактирования и окна добавления новой карточки -->
-    <template id="popup">
-      <div class="popup">
+    <main class="main">
+      <!-- модальное окно редактирования информации о пользователе -->
+      <div class="popup popup_type_edit-profile">
         <div class="popup__container">
           <div class="popup__edit-window">
-            <h2 class="popup__title"></h2>
+            <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form-container" name="form-container">
-              <input class="popup__input" type="text">
-              <input class="popup__input" type="text">
-              <button class="popup__save-button" type="submit"></button>
+              <input
+                class="popup__input popup__input_el_name"
+                type="text"
+                name="name"
+                value="Жак-Ив Кусто"
+                placeholder="Введите свое имя"
+              />
+              <input
+                class="popup__input popup__input_el_description"
+                type="text"
+                name="description"
+                value="Исследователь океана"
+                placeholder="Напишите немного о себе"
+              />
+              <button class="popup__save-button" type="button">
+                Сохранить
+              </button>
             </form>
           </div>
-          <button class="popup__exit-button" type="button" aria-label="close"></button>
+          <button
+            class="popup__exit-button"
+            type="button"
+            aria-label="close"
+          ></button>
         </div>
       </div>
-    </template>
 
-    <!-- модальное окно просмотра картинки -->
-      <div class="popup">
+      <!-- модальное окно добавления новой карточки -->
+      <div class="popup popup_type_new-card">
+        <div class="popup__container">
+          <div class="popup__edit-window">
+            <h2 class="popup__title">Новое место</h2>
+            <form class="popup__form-container" name="form-container">
+              <input
+                class="popup__input popup__input_el_place-name"
+                type="text"
+                name="place name"
+                placeholder="Название"
+              />
+              <input
+                class="popup__input popup__input_el_link"
+                type="text"
+                name="description"
+                placeholder="Ссылка на картинку"
+              />
+              <button class="popup__save-button" type="button">
+                Создать
+              </button>
+            </form>
+          </div>
+          <button
+            class="popup__exit-button"
+            type="button"
+            aria-label="close"
+          ></button>
+        </div>
+      </div>
+
+      <!-- модальное окно просмотра карточки -->
+      <div class="popup popup_type_view-card">
         <div class="popup__container">
           <div class="popup__picture-and-title">
-            <img class="popup__image">
+            <img class="popup__image" />
             <h3 class="popup__place-name"></h3>
           </div>
-          <button class="popup__exit-button" type="button" aria-label="close"></button>
+          <button
+            class="popup__exit-button"
+            type="button"
+            aria-label="close"
+          ></button>
         </div>
       </div>
 
-    <section class="profile">
-      <div class="profile__container">
-        <div class="profile__avatar"></div>
-        <div class="profile__profile-info">
-          <div class="profile__name-and-button">
-            <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button" type="button" aria-label="edit"></button>
+      <section class="profile">
+        <div class="profile__container">
+          <div class="profile__avatar"></div>
+          <div class="profile__profile-info">
+            <div class="profile__name-and-button">
+              <h1 class="profile__name">Жак-Ив Кусто</h1>
+              <button
+                class="profile__edit-button"
+                type="button"
+                aria-label="edit"
+              ></button>
+            </div>
+            <p class="profile__description">Исследователь океана</p>
           </div>
-          <p class="profile__description">Исследователь океана</p>
         </div>
-      </div>
-      <button class="profile__add-button" type="button" aria-label="add">
-        <img src="./images/add-button.svg" alt="Иконка добавления нового поста.">
-      </button>
-    </section>
+        <button class="profile__add-button" type="button" aria-label="add">
+          <img
+            src="./images/add-button.svg"
+            alt="Иконка добавления нового поста."
+          />
+        </button>
+      </section>
 
-    <section class="cards">
+      <section class="cards">
+        <template id="card">
+          <article class="card">
+            <button
+              class="card__delete-button"
+              type="reset"
+              aria-label="delete"
+            ></button>
+            <img class="card__image" />
+            <div class="card__caption">
+              <p class="card__place-name"></p>
+              <button
+                class="card__like-button"
+                type="button"
+                aria-label="like"
+              ></button>
+            </div>
+          </article>
+        </template>
+      </section>
+    </main>
 
-      <template id="card">
-        <article class="card">
-          <button class="card__delete-button" type="reset" aria-label="delete"></button>
-          <img class="card__image">
-          <div class="card__caption">
-            <p class="card__place-name"></p>
-            <button class="card__like-button" type="button" aria-label="like"></button>
-          </div>
-        </article>
-      </template>
+    <footer class="footer">
+      <p class="footer__signature">&copy; 2022 Mesto Russia</p>
+    </footer>
 
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p class="footer__signature">&copy; 2022 Mesto Russia</p>
-  </footer>
-
-  <script src="./script.js"></script>
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>

@@ -29,6 +29,8 @@
 
 @import url("../blocks/popup/__place-name/popup__place-name.css");
 
+@import url("../blocks/popup/_type/popup_type_view-card.css");
+
 /* header */
 @import url("../blocks/header/header.css");
 
