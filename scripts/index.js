@@ -44,7 +44,7 @@ function addNewCard(card) {
 }
 
 // -----------модальное окно редактирования профиля----------------
-function openPopupProfileEdit() {
+function setInputsValue() {
   nameInput.value = nameElement.textContent;
   discriptionInput.value = descriptionElement.textContent;
 }
@@ -57,7 +57,7 @@ function submitProfileInfo(evt) {
 
 editProfileInfoButton.addEventListener("click", function () {
   openPopup(popupProfileEdit);
-  openPopupProfileEdit();
+  setInputsValue();
 });
 
 formProfileEdit.addEventListener("submit", function (evt) {
@@ -70,9 +70,8 @@ exitProfileEdit.addEventListener("click", function () {
 });
 
 //---------------модальное окно добавления новой карточки--------------
-function openPopupNewCard() {
-  placeInput.value = "";
-  linkInput.value = "";
+function resetFormAddCard() {
+  formAddCard.reset();
 }
 
 function submitNewCard(evt) {
@@ -83,7 +82,7 @@ function submitNewCard(evt) {
 
 addNewCardButton.addEventListener("click", function () {
   openPopup(popupAddCard);
-  openPopupNewCard();
+  resetFormAddCard();
 });
 
 formAddCard.addEventListener("submit", function (evt) {
@@ -97,7 +96,7 @@ exitAddCard.addEventListener("click", function () {
 
 //---------------модальное окно просмотра карточки----------------
 exitViewCard.addEventListener("click", function () {
-  popupViewCard.classList.remove("popup_opened");
+  closePopup(popupViewCard);
 });
 
 // --------------------------- СОЗДАНИЕ КАРТОЧКИ ------------------------------
